@@ -16,7 +16,15 @@ open class MainActivity : AppCompatActivity() {
         val button = binding.button
         val textView = binding.textView
         val random = binding.button2
+        val create = binding.button3
+        val title = binding.editText
+        val text = binding.editText2
+        val note = binding.textView2
 
+
+        create.setOnClickListener {
+            note.text = getString(R.string.note, title.text, text.text)
+        }
 
         button.setOnClickListener {
             count++
